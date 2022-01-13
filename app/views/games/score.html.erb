@@ -1,0 +1,13 @@
+<h1>Result</h1>
+
+<% if @included %>
+  <% if @english_word %>
+    <p>Congratulations! <strong><%= @word %></strong> it is a valid english word!</p>
+  <% else %>
+    <p>Sorry but that is not an english word!</p>
+  <% end %>
+<% else %>
+  <p>Not included!</p>
+<% end %>
+
+<%= link_to "Play again", new_path %>
