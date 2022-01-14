@@ -2,12 +2,12 @@
 
 <% if @included %>
   <% if @english_word %>
-    <p>Congratulations! <strong><%= @word %></strong> it is a valid english word!</p>
+    <p>Congratulations! <strong><%= @word %></strong> is a valid english word!</p>
   <% else %>
-    <p>Sorry but that is not an english word!</p>
+    <p>Sorry but <strong><%= @word %></strong> is not an english word!</p>
   <% end %>
 <% else %>
-  <p>Not included!</p>
+  <p>Sorry but <strong><%= @word %></strong> can't be built out of <%= @letters %>!</p>
 <% end %>
 
 <%= link_to "Play again", new_path %>
